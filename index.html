@@ -1,662 +1,404 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>T R B | مصنع الزجاج المعماري الفاخر</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>مصنع TRB للزجاج المعماري الفاخر | كبائن شاور، درابزين، أبواب زجاجية</title>
+    <meta name="description" content="مصنع TRB متخصص في تصنيع وتركيب الزجاج المعماري الفاخر. كبائن شاور زجاجية، درابزينات سلالم، أبواب زجاجية متحركة وثابتة بأعلى جودة.">
+    <meta name="keywords" content="مصنع زجاج, TRB, زجاج معماري, كبائن شاور, درابزين زجاجي, أبواب زجاجية, زجاج سيكوريت">
+    <meta name="author" content="مهندس عبدالله أحمد">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Preconnect للتحسين -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" as="style">
+    <link rel="preload" href="style.css" as="style">
+    
+    <!-- Critical CSS مضمن -->
+    <style>
+        /* Critical CSS للـ Above the Fold */
+        body{margin:0;font-family:'Cairo',sans-serif;overflow-x:hidden}
+        .main-header{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(10,21,32,.85);backdrop-filter:blur(15px);padding:15px 0}
+        .hero-section{position:relative;min-height:100vh;display:flex;align-items:center;background:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80') center/cover}
+        .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,21,32,.75),rgba(19,34,56,.65))}
+        .hero-glass-card{position:relative;z-index:2;width:100%;max-width:900px;margin:0 auto;padding:40px 35px;background:rgba(255,255,255,.08);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.15);border-radius:20px}
+        .hero-title{font-size:clamp(28px,5vw,52px);font-weight:900;line-height:1.2;margin-bottom:22px;color:#f8fafc}
+        .btn-primary{display:inline-block;padding:15px 32px;background:linear-gradient(135deg,#bfa15f,#f0d78c);color:#0a1520;border-radius:8px;text-decoration:none;font-weight:700}
+        @media(max-width:768px){.hero-glass-card{padding:25px 15px}.hero-title{font-size:28px}}
+    </style>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Main CSS - مؤجل -->
+    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="style.css"></noscript>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
     <!-- Header -->
     <header class="main-header">
-      <div class="container header-container">
-        <div class="logo">
-          <a href="#home" class="highlight-text">
-            T R B
-            <span>GLASS FACTORY</span>
-          </a>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="#home">
+                    TRB
+                    <span>GLASS FACTORY</span>
+                </a>
+            </div>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#home" class="active"><i class="fas fa-home"></i> الرئيسية</a></li>
+                    <li><a href="#about"><i class="fas fa-info-circle"></i> عن المصنع</a></li>
+                    <li><a href="#categories"><i class="fas fa-th-large"></i> الأقسام والمنتجات</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> تواصل معنا</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
-        <nav class="nav-menu" id="navMenu">
-          <ul>
-            <li>
-              <a href="#home" class="active hover-target"
-                ><i class="fas fa-home"></i> الرئيسية</a
-              >
-            </li>
-            <li>
-              <a href="#about" class="hover-target"
-                ><i class="fas fa-info-circle"></i> عن المصنع</a
-              >
-            </li>
-            <li>
-              <a href="#categories" class="hover-target"
-                ><i class="fas fa-th-large"></i> الأقسام والمنتجات</a
-              >
-            </li>
-            <li>
-              <a href="#contact" class="hover-target"
-                ><i class="fas fa-envelope"></i> تواصل معنا</a
-              >
-            </li>
-          </ul>
-        </nav>
-        <div class="menu-toggle hover-target" id="menuToggle">
-          <i class="fas fa-bars"></i>
-        </div>
-      </div>
     </header>
 
-    <!-- Hero Section مع تأثير زجاجي كامل -->
-    <!-- Hero Section مع بطاقة زجاجية أنيقة -->
+    <!-- Hero Section -->
     <section class="hero-section" id="home">
-      <!-- طبقة تظليل -->
-      <div class="hero-overlay"></div>
-
-      <!-- البطاقة الزجاجية التي تحتوي المحتوى -->
-      <div class="hero-glass-card" data-aos="fade-up" data-aos-duration="1000">
-        <div class="hero-content">
-          <span class="hero-subtitle"
-            >رواد صناعة وتشكيل الزجاج المعماري الفاخر</span
-          >
-          <h1 class="hero-title">
-            مصنع <span class="highlight-text">T R B</span> للأنظمة الزجاجية
-          </h1>
-          <p class="hero-description">
-            نصنع الفخامة بدقة متناهية. متخصصون في تصميم وتركيب كبائن الشاور،
-            درابزينات السلالم، والأبواب الزجاجية بأعلى معايير الجودة العالمية.
-          </p>
-          <div class="hero-buttons">
-            <a
-              href="#categories"
-              class="btn btn-primary magnetic-btn hover-target"
-              >استكشف منتجاتنا</a
-            >
-            <a
-              href="https://wa.me/966509321020"
-              class="btn btn-secondary magnetic-btn hover-target"
-              target="_blank"
-              ><i class="fab fa-whatsapp"></i> استشارة مجانية</a
-            >
-          </div>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-glass-card">
+            <div class="hero-content">
+                <span class="hero-subtitle">رواد صناعة وتشكيل الزجاج المعماري الفاخر</span>
+                <h1 class="hero-title">مصنع <span class="highlight-text">TRB</span> للأنظمة الزجاجية</h1>
+                <p class="hero-description">نصنع الفخامة بدقة متناهية. متخصصون في تصميم وتركيب كبائن الشاور، درابزينات السلالم، والأبواب الزجاجية بأعلى معايير الجودة العالمية.</p>
+                <div class="hero-buttons">
+                    <a href="#categories" class="btn btn-primary">استكشف منتجاتنا</a>
+                    <a href="https://wa.me/966509321020" class="btn btn-secondary" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> استشارة مجانية</a>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <div class="hero-badge" data-aos="fade-left" data-aos-delay="400">
-        <div class="badge-number">100%</div>
-        <div class="badge-text">ضمان وجودة<br />في كل تفصيلة</div>
-      </div>
+        
+        <div class="hero-badge">
+            <div class="badge-number">100%</div>
+            <div class="badge-text">ضمان وجودة<br>في كل تفصيلة</div>
+        </div>
     </section>
 
     <!-- About Section -->
     <section class="about-section" id="about">
-      <div class="container about-wrapper">
-        <div class="about-text" data-aos="fade-left">
-          <span class="section-tag">من نحن</span>
-          <h2 class="section-title">فخامة التصميم وهندسة الزجاج الحديثة</h2>
-          <p class="about-p">
-            في مصنع TRB، لا نقوم فقط بقطع الزجاج، بل نشكل التحف المعمارية التي
-            تضفي على مساحتك لمسة من الأناقة والاتساع. نلتزم باستخدام أفضل أنواع
-            الزجاج المقسى (Tempered Glass) مع إكسسوارات فاخرة مقاومة للصدأ.
-          </p>
+        <div class="container about-wrapper">
+            <div class="about-text">
+                <span class="section-tag">من نحن</span>
+                <h2 class="section-title">فخامة التصميم وهندسة الزجاج الحديثة</h2>
+                <p class="about-p">في مصنع TRB، لا نقوم فقط بقطع الزجاج، بل نشكل التحف المعمارية التي تضفي على مساحتك لمسة من الأناقة والاتساع. نلتزم باستخدام أفضل أنواع الزجاج المقسى (Tempered Glass) مع إكسسوارات فاخرة مقاومة للصدأ.</p>
+                
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="feature-info">
+                            <h3>أمان متناهي</h3>
+                            <p>زجاج سيكوريت معالج حرارياً يتحمل أقصى درجات الضغط.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-gem"></i></div>
+                        <div class="feature-info">
+                            <h3>إكسسوارات فاخرة</h3>
+                            <p>ستانلس ستيل ومكائن بضمان حقيقي ممتد.</p>
+                        </div>
+                    </div>
+                </div>
 
-          <div class="features-grid">
-            <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
-              <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-              <div class="feature-info">
-                <h3>أمان متناهي</h3>
-                <p>زجاج سيكوريت معالج حرارياً يتحمل أقصى درجات الضغط.</p>
-              </div>
+                <div class="stats-counters">
+                    <div class="stat-box">
+                        <span class="counter-num" data-target="150">0</span>
+                        <span class="stat-label">مشروع منفذ</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="counter-num" data-target="10">0</span>
+                        <span class="stat-label">أعوام من الخبرة</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="counter-num" data-target="100">0</span><span class="percent">%</span>
+                        <span class="stat-label">عملاء راضون</span>
+                    </div>
+                </div>
             </div>
-            <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
-              <div class="feature-icon"><i class="fas fa-gem"></i></div>
-              <div class="feature-info">
-                <h3>إكسسوارات فاخرة</h3>
-                <p>ستانلس ستيل ومكائن بضمان حقيقي ممتد.</p>
-              </div>
+            <div class="about-visual">
+                <div class="visual-box"></div>
+                <div class="experience-card">
+                    <span class="exp-num">+15</span>
+                    <span class="exp-text">عاماً من التميز</span>
+                </div>
             </div>
-          </div>
-
-          <div class="stats-counters" data-aos="fade-up" data-aos-delay="300">
-            <div class="stat-box">
-              <span class="counter-num" data-target="150">0</span>
-              <span class="stat-label">مشروع منفذ</span>
-            </div>
-            <div class="stat-box">
-              <span class="counter-num" data-target="10">0</span>
-              <span class="stat-label">أعوام من الخبرة</span>
-            </div>
-            <div class="stat-box">
-              <span class="counter-num" data-target="100">0</span
-              ><span class="percent">%</span>
-              <span class="stat-label">عملاء راضون</span>
-            </div>
-          </div>
         </div>
-        <div class="about-visual" data-aos="fade-right">
-          <div class="visual-box"></div>
-          <div class="experience-card">
-            <span class="exp-num">+15</span>
-            <span class="exp-text">عاماً من التميز</span>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- Categories Section -->
     <section class="categories-section" id="categories">
-      <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <span class="section-tag">معرض أعمالنا</span>
-          <h2 class="section-title">أقسام المنتجات</h2>
-          <p class="section-subtitle">
-            اضغط على الصورة في أي كارت لاستعراض باقي صور المنتج بشكل مكبر
-          </p>
-        </div>
-
-        <div class="tabs-navigation" data-aos="fade-up" data-aos-delay="100">
-          <button class="tab-btn active hover-target" data-target="shower">
-            <i class="fas fa-shower"></i> قسم الشاورات
-          </button>
-          <button class="tab-btn hover-target" data-target="handrail">
-            <i class="fas fa-grip-lines"></i> قسم الدرابزين
-          </button>
-          <button class="tab-btn hover-target" data-target="doors">
-            <i class="fas fa-door-open"></i> الأبواب الزجاجية
-          </button>
-          <button class="tab-btn hover-target" data-target="wooden-doors">
-            <i class="fas fa-door-closed"></i> الأبواب الخشبية
-          </button>
-        </div>
-
-        <!-- Shower Tab -->
-        <div class="tab-panel active" id="shower">
-          <div class="products-grid">
-            <div class="product-card glass-tilt" data-aos="fade-up">
-              <div class="product-gallery-wrapper hover-target">
-                <img
-                  src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=800&q=80"
-                  alt="كابينة شاور"
-                  class="main-img"
-                  loading="lazy"
-                />
-                <span class="product-tag"
-                  ><i class="fas fa-camera"></i> اضغط لمشاهدة التنفيذ
-                  الواقعي</span
-                >
-                <div class="hidden-images">
-                  <img
-                    src="https://res.cloudinary.com/dlcwlgs9i/image/upload/t_%D8%A8%D9%8A%D8%A8/WhatsApp_Image_2026-06-09_at_1.42.59_PM_orh9vb.jpg"
-                    alt="شاور 1"
-                  />
-                  <img
-                    src="https://res.cloudinary.com/dlcwlgs9i/image/upload/ar_1:1,c_auto/ar_1:1,c_auto/WhatsApp_Image_2026-06-09_at_1.43.00_PM_a4uj4k.jpg"
-                    alt="شاور 2"
-                  />
-                  <img
-                    src="https://res.cloudinary.com/dlcwlgs9i/image/upload/ar_1:1,c_auto/ar_1:1,c_auto/WhatsApp_Image_2026-06-09_at_1.42.59_PM_1_xyzok9.jpg"
-                    alt="شاور 3"
-                  />
-                </div>
-              </div>
-              <div class="product-details">
-                <h3 class="product-name">
-                  <i class="fas fa-star"></i> كابينة شاور زجاجية مودرن - نظام
-                  انزلاق ذكي
-                </h3>
-                <ul class="product-specs">
-                  <li>
-                    <i class="fas fa-check-circle"></i> زجاج سيكوريت عالي
-                    السماكة والمقاومة
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> إكسسوارات ومفاصل ستانلس
-                    ستيل أصلية
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> عزل تام للمياه مع
-                    إمكانية التخصيص حسب المقاس
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> تصميم عصري أنيق يتناسب
-                    مع مختلف الديكورات
-                  </li>
-                </ul>
-                <div class="product-meta">
-                  <div class="product-price">
-                    <span class="price-label">سعر المتر</span>
-                    <span class="price-value">1,400 <small>ريال</small></span>
-                  </div>
-                  <a
-                    href="https://wa.me/966509321020?text=مرحباً%20مصنع%20TRB،%20أود%20طلب%20تفصيل%20شاورات%20زجاجية"
-                    class="btn-whatsapp magnetic-btn hover-target"
-                    target="_blank"
-                  >
-                    <i class="fab fa-whatsapp"></i> طلب عبر الواتساب
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Handrail Tab -->
-        <div class="tab-panel" id="handrail">
-          <div class="products-grid">
-            <div class="product-card glass-tilt" data-aos="fade-up">
-              <div class="product-gallery-wrapper hover-target">
-                <img
-                  src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80"
-                  alt="درابزين زجاجي"
-                  class="main-img"
-                  loading="lazy"
-                />
-                <span class="product-tag"
-                  ><i class="fas fa-camera"></i> اضغط لمشاهدة التنفيذ
-                  الواقعي</span
-                >
-                <div class="hidden-images">
-                  <img
-                    src="https://res.cloudinary.com/dlcwlgs9i/image/upload/c_crop,g_north_west,h_980,w_738,y_310/WhatsApp_Image_2026-06-09_at_2.55.34_PM_2_e58bff.jpg"
-                    alt="درابزين 1"
-                  />
-                  <img
-                    src="https://res.cloudinary.com/dlcwlgs9i/image/upload/v1781230690/WhatsApp_Image_2026-06-09_at_2.55.34_PM_faxy1i.jpg"
-                    alt="درابزين 2"
-                  />
-                  <img
-                    src="https://res.cloudinary.com/dlcwlgs9i/image/upload/v1781230690/WhatsApp_Image_2026-06-09_at_2.55.33_PM_rndczl.jpg"
-                    alt="درابزين 3"
-                  />
-                  <img
-                    src="https://res.cloudinary.com/dlcwlgs9i/image/upload/c_crop,g_north_west,h_340,w_738,y_629/WhatsApp_Image_2026-06-09_at_2.55.34_PM_1_rahdaj.jpg"
-                    alt="درابزين 4"
-                  />
-                  <img
-                    src="https://res.cloudinary.com/dlcwlgs9i/image/upload/c_crop,g_north_west,h_340,w_738,y_629/WhatsApp_Image_2026-06-09_at_2.55.33_PM_1_ucflvb.jpg"
-                    alt="درابزين 5"
-                  />
-                </div>
-              </div>
-              <div class="product-details">
-                <h3 class="product-name">
-                  <i class="fas fa-star"></i> درابزين زجاجي فاخر
-                </h3>
-                <ul class="product-specs">
-                  <li>
-                    <i class="fas fa-check-circle"></i> زجاج سيكوريت ودوبلكس آمن
-                    للسلالم والبلكونات
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> إكسسوارات ستانلس ستيل
-                    316 مقاومة للعوامل الجوية
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> تصاميم عصرية بدون إطار
-                    أو بأعمدة تثبيت
-                  </li>
-                </ul>
-                <div class="product-meta">
-                  <div class="product-price">
-                    <span class="price-label">سعر المتر الطولي</span>
-                    <span class="price-value">600 <small>ريال</small></span>
-                  </div>
-                  <a
-                    href="https://wa.me/966509321020?text=مرحباً%20مصنع%20TRB،%20أود%20طلب%20درابزين%20زجاجي"
-                    class="btn-whatsapp magnetic-btn hover-target"
-                    target="_blank"
-                  >
-                    <i class="fab fa-whatsapp"></i> طلب عبر الواتساب
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Doors Tab (Glass Doors) -->
-        <div class="tab-panel" id="doors">
-          <div class="products-grid">
-            <div class="product-card glass-tilt" data-aos="fade-up">
-              <div class="product-gallery-wrapper hover-target">
-                <img
-                  src="https://res.cloudinary.com/dlcwlgs9i/image/upload/c_crop,g_north_west,h_726,w_943,x_208/Gemini_Generated_Image_q302idq302idq302_trbnhp.png"
-                  alt="باب ثابت"
-                  class="main-img"
-                  loading="lazy"
-                />
-                <span class="product-tag"
-                  ><i class="fas fa-camera"></i> اضغط لمشاهدة التنفيذ
-                  الواقعي</span
-                >
-                <div class="hidden-images">
-                  <img
-                    src="https://res.cloudinary.com/dlcwlgs9i/image/upload/v1781231191/WhatsApp_Image_2026-06-09_at_2.57.41_PM_2_caa5yw.jpg"
-                    alt="باب ثابت 1"
-                  />
-                  <img
-                    src="https://res.cloudinary.com/dlcwlgs9i/image/upload/v1781231191/WhatsApp_Image_2026-06-09_at_2.57.41_PM_2_caa5yw.jpg"
-                    alt="باب ثابت 2"
-                  />
-                </div>
-              </div>
-              <div class="product-details">
-                <h3 class="product-name">
-                  <i class="fas fa-star"></i> الأبواب الزجاجية (القسم الثابت)
-                </h3>
-                <ul class="product-specs">
-                  <li>
-                    <i class="fas fa-check-circle"></i> زجاج سيكوريت متين وعالي
-                    النقاء
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> تصميم هندسي ثابت ومتقن
-                    للواجهات
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> تثبيت آمن واحترافي
-                  </li>
-                </ul>
-                <div class="product-meta">
-                  <div class="product-price">
-                    <span class="price-label">سعر المتر المربع</span>
-                    <span class="price-value">350 <small>ريال</small></span>
-                  </div>
-                  <a
-                    href="https://wa.me/966509321020?text=مرحباً%20مصنع%20TRB،%20استفسار%20عن%20القسم%20الثابت"
-                    class="btn-whatsapp magnetic-btn hover-target"
-                    target="_blank"
-                  >
-                    <i class="fab fa-whatsapp"></i> طلب عبر الواتساب
-                  </a>
-                </div>
-              </div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">معرض أعمالنا</span>
+                <h2 class="section-title">أقسام المنتجات</h2>
+                <p class="section-subtitle">اضغط على الصورة في أي كارت لاستعراض باقي صور المنتج بشكل مكبر</p>
             </div>
 
-            <div
-              class="product-card glass-tilt"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="product-gallery-wrapper hover-target">
-                <img
-                  src="https://res.cloudinary.com/dlcwlgs9i/image/upload/c_crop,g_north_west,h_978,w_738,y_310/WhatsApp_Image_2026-06-09_at_2.57.41_PM_3_g81dhc.jpg"
-                  alt="باب متحرك"
-                  class="main-img"
-                  loading="lazy"
-                />
-                <span class="product-tag"
-                  ><i class="fas fa-camera"></i> اضغط لمشاهدة التنفيذ
-                  الواقعي</span
-                >
-                <div class="hidden-images">
-                  <img
-                    src="https://res.cloudinary.com/dlcwlgs9i/image/upload/c_crop,g_north_west,h_982,w_738,y_310/WhatsApp_Image_2026-06-09_at_2.57.41_PM_3_g81dhc.jpg"
-                    alt="باب متحرك 1"
-                  />
-                  <img
-                    src="https://res.cloudinary.com/dlcwlgs9i/image/upload/v1781231190/WhatsApp_Image_2026-06-09_at_2.57.41_PM_1_mfbqhj.jpg"
-                    alt="باب متحرك 2"
-                  />
-                  <img
-                    src="https://res.cloudinary.com/dlcwlgs9i/image/upload/v1781231190/WhatsApp_Image_2026-06-09_at_2.57.40_PM_u3360u.jpg"
-                    alt="باب متحرك 3"
-                  />
-                </div>
-              </div>
-              <div class="product-details">
-                <h3 class="product-name">
-                  <i class="fas fa-star"></i> الأبواب الزجاجية (الباب المتحرك)
-                </h3>
-                <ul class="product-specs">
-                  <li>
-                    <i class="fas fa-check-circle"></i> شامل المكينة
-                    والإكسسوارات الأصلية
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> ضمان سنتين على الماكينة
-                    والتركيب
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> حركة انسيابية وسلسة
-                    وعازلة للصوت
-                  </li>
-                </ul>
-                <div class="product-meta">
-                  <div class="product-price">
-                    <span class="price-label">سعر المتر المربع</span>
-                    <span class="price-value">1,400 <small>ريال</small></span>
-                  </div>
-                  <a
-                    href="https://wa.me/966509321020?text=مرحباً%20مصنع%20TRB،%20استفسار%20عن%20الباب%20المتحرك"
-                    class="btn-whatsapp magnetic-btn hover-target"
-                    target="_blank"
-                  >
-                    <i class="fab fa-whatsapp"></i> طلب عبر الواتساب
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Wooden Doors Tab -->
-        <!-- Wooden Doors Tab -->
-        <div class="tab-panel" id="wooden-doors">
-          <div class="products-grid">
-            <!-- WPC Door Card -->
-            <div class="product-card glass-tilt" data-aos="fade-up">
-              <div class="product-gallery-wrapper hover-target">
-                <img
-                  src="https://res.cloudinary.com/dlcwlgs9i/image/upload/v1781623132/Gemini_Generated_Image_qvpf8nqvpf8nqvpf_gu9hgb.png"
-                  alt="باب WPC"
-                  class="main-img"
-                  loading="lazy"
-                />
-                <!-- <span class="product-tag"
-                  ><i class="fas fa-camera"></i> اضغط لمشاهدة التفاصيل</span
-                > -->
-                <div class="hidden-images">
-                  <img
-                    src="https://i.imgur.com/your-wpc-door-image.jpg"
-                    alt="WPC Door 1"
-                  />
-                  <img
-                    src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80"
-                    alt="WPC Door 2"
-                  />
-                </div>
-              </div>
-              <div class="product-details">
-                <h3 class="product-name">
-                  <i class="fas fa-door-closed"></i> باب WPC (Wood Plastic
-                  Composite)
-                </h3>
-                <ul class="product-specs">
-                  <li>
-                    <i class="fas fa-check-circle"></i> مقاوم للماء والرطوبة
-                    بنسبة 100%
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> مضاد للنمل الأبيض
-                    والحشرات
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> عزل حراري وصوتي متقدم
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> صديق للبيئة (معاد
-                    تدويره)
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> لا يحتاج للدهان أو
-                    الصيانة
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> متانة عالية وعمر افتراضي
-                    طويل
-                  </li>
-                </ul>
-                <div class="product-meta">
-                  <div class="product-price">
-                    <span class="price-label">السعر</span>
-                    <span class="price-value">1,000 <small>ريال</small></span>
-                  </div>
-                  <a
-                    href="https://wa.me/966509321020?text=مرحباً%20مصنع%20TRB،%20أود%20الاستفسار%20عن%20باب%20WPC"
-                    class="btn-whatsapp magnetic-btn hover-target"
-                    target="_blank"
-                  >
-                    <i class="fab fa-whatsapp"></i> اطلب الآن
-                  </a>
-                </div>
-              </div>
+            <div class="tabs-navigation">
+                <button class="tab-btn active" data-target="shower"><i class="fas fa-shower"></i> قسم الشاورات</button>
+                <button class="tab-btn" data-target="handrail"><i class="fas fa-grip-lines"></i> قسم الدرابزين</button>
+                <button class="tab-btn" data-target="doors"><i class="fas fa-door-open"></i> الأبواب الزجاجية</button>
+                <button class="tab-btn" data-target="wooden-doors"><i class="fas fa-door-closed"></i> الأبواب الخشبية</button>
             </div>
 
-            <!-- BPC Door Card -->
-            <div
-              class="product-card glass-tilt"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="product-gallery-wrapper hover-target">
-                <img
-                  src="https://res.cloudinary.com/dlcwlgs9i/image/upload/v1781623400/Gemini_Generated_Image_n7pbk1n7pbk1n7pb_sarnuj.png"
-                  alt="باب BPC"
-                  class="main-img"
-                  loading="lazy"
-                />
-                <!-- <span class="product-tag"
-                  ><i class="fas fa-camera"></i> اضغط لمشاهدة التفاصيل</span
-                > -->
-                <div class="hidden-images">
-                  <img
-                    src="https://i.imgur.com/your-bpc-door-image.jpg"
-                    alt="BPC Door 1"
-                  />
-                  <img
-                    src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80"
-                    alt="BPC Door 2"
-                  />
+            <!-- Shower Tab -->
+            <div class="tab-panel active" id="shower">
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-gallery-wrapper">
+                            <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=800&q=80" alt="كابينة شاور" class="main-img" loading="lazy" width="800" height="600">
+                            <span class="product-tag"><i class="fas fa-camera"></i> اضغط لمشاهدة التنفيذ الواقعي</span>
+                            <div class="hidden-images">
+                                <img src="https://res.cloudinary.com/dlcwlgs9i/image/upload/t_%D8%A8%D9%8A%D8%A8/WhatsApp_Image_2026-06-09_at_1.42.59_PM_orh9vb.jpg" alt="شاور 1" loading="lazy">
+                                <img src="https://res.cloudinary.com/dlcwlgs9i/image/upload/ar_1:1,c_auto/ar_1:1,c_auto/WhatsApp_Image_2026-06-09_at_1.43.00_PM_a4uj4k.jpg" alt="شاور 2" loading="lazy">
+                                <img src="https://res.cloudinary.com/dlcwlgs9i/image/upload/ar_1:1,c_auto/ar_1:1,c_auto/WhatsApp_Image_2026-06-09_at_1.42.59_PM_1_xyzok9.jpg" alt="شاور 3" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-name"><i class="fas fa-star"></i> كابينة شاور زجاجية مودرن - نظام انزلاق ذكي</h3>
+                            <ul class="product-specs">
+                                <li><i class="fas fa-check-circle"></i> زجاج سيكوريت عالي السماكة والمقاومة</li>
+                                <li><i class="fas fa-check-circle"></i> إكسسوارات ومفاصل ستانلس ستيل أصلية</li>
+                                <li><i class="fas fa-check-circle"></i> عزل تام للمياه مع إمكانية التخصيص حسب المقاس</li>
+                                <li><i class="fas fa-check-circle"></i> تصميم عصري أنيق يتناسب مع مختلف الديكورات</li>
+                            </ul>
+                            <div class="product-meta">
+                                <div class="product-price">
+                                    <span class="price-label">سعر المتر</span>
+                                    <span class="price-value">1,400 <small>ريال</small></span>
+                                </div>
+                                <a href="https://wa.me/966509321020?text=مرحباً%20مصنع%20TRB،%20أود%20طلب%20تفصيل%20شاورات%20زجاجية" class="btn-whatsapp" target="_blank" rel="noopener">
+                                    <i class="fab fa-whatsapp"></i> طلب عبر الواتساب
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="product-details">
-                <h3 class="product-name">
-                  <i class="fas fa-door-closed"></i> باب BPC (Bamboo Plastic
-                  Composite)
-                </h3>
-                <ul class="product-specs">
-                  <li>
-                    <i class="fas fa-check-circle"></i> مصنوع من ألياف الخيزران
-                    الطبيعية
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> مقاوم للرطوبة والعوامل
-                    الجوية
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> مظهر طبيعي أنيق (تشطيب
-                    خشبي)
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> خفيف الوزن مع قوة عالية
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> صديق للبيئة ومستدام
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> عزل حراري وصوتي ممتاز
-                  </li>
-                </ul>
-                <div class="product-meta">
-                  <div class="product-price">
-                    <span class="price-label">السعر</span>
-                    <span class="price-value">950 <small>ريال</small></span>
-                  </div>
-                  <a
-                    href="https://wa.me/966509321020?text=مرحباً%20مصنع%20TRB،%20أود%20الاستفسار%20عن%20باب%20BPC"
-                    class="btn-whatsapp magnetic-btn hover-target"
-                    target="_blank"
-                  >
-                    <i class="fab fa-whatsapp"></i> اطلب الآن
-                  </a>
-                </div>
-              </div>
             </div>
-          </div>
+
+            <!-- Handrail Tab -->
+            <div class="tab-panel" id="handrail">
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-gallery-wrapper">
+                            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80" alt="درابزين زجاجي" class="main-img" loading="lazy" width="800" height="600">
+                            <span class="product-tag"><i class="fas fa-camera"></i> اضغط لمشاهدة التنفيذ الواقعي</span>
+                            <div class="hidden-images">
+                                <img src="https://res.cloudinary.com/dlcwlgs9i/image/upload/c_crop,g_north_west,h_980,w_738,y_310/WhatsApp_Image_2026-06-09_at_2.55.34_PM_2_e58bff.jpg" alt="درابزين 1" loading="lazy">
+                                <img src="https://res.cloudinary.com/dlcwlgs9i/image/upload/v1781230690/WhatsApp_Image_2026-06-09_at_2.55.34_PM_faxy1i.jpg" alt="درابزين 2" loading="lazy">
+                                <img src="https://res.cloudinary.com/dlcwlgs9i/image/upload/v1781230690/WhatsApp_Image_2026-06-09_at_2.55.33_PM_rndczl.jpg" alt="درابزين 3" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-name"><i class="fas fa-star"></i> درابزين زجاجي فاخر</h3>
+                            <ul class="product-specs">
+                                <li><i class="fas fa-check-circle"></i> زجاج سيكوريت ودوبلكس آمن للسلالم والبلكونات</li>
+                                <li><i class="fas fa-check-circle"></i> إكسسوارات ستانلس ستيل 316 مقاومة للعوامل الجوية</li>
+                                <li><i class="fas fa-check-circle"></i> تصاميم عصرية بدون إطار أو بأعمدة تثبيت</li>
+                            </ul>
+                            <div class="product-meta">
+                                <div class="product-price">
+                                    <span class="price-label">سعر المتر الطولي</span>
+                                    <span class="price-value">600 <small>ريال</small></span>
+                                </div>
+                                <a href="https://wa.me/966509321020?text=مرحباً%20مصنع%20TRB،%20أود%20طلب%20درابزين%20زجاجي" class="btn-whatsapp" target="_blank" rel="noopener">
+                                    <i class="fab fa-whatsapp"></i> طلب عبر الواتساب
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Glass Doors Tab -->
+            <div class="tab-panel" id="doors">
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-gallery-wrapper">
+                            <img src="https://res.cloudinary.com/dlcwlgs9i/image/upload/c_crop,g_north_west,h_726,w_943,x_208/Gemini_Generated_Image_q302idq302idq302_trbnhp.png" alt="باب ثابت" class="main-img" loading="lazy" width="800" height="600">
+                            <span class="product-tag"><i class="fas fa-camera"></i> اضغط لمشاهدة التنفيذ الواقعي</span>
+                            <div class="hidden-images">
+                                <img src="https://res.cloudinary.com/dlcwlgs9i/image/upload/v1781231191/WhatsApp_Image_2026-06-09_at_2.57.41_PM_2_caa5yw.jpg" alt="باب ثابت 1" loading="lazy">
+                                <img src="https://res.cloudinary.com/dlcwlgs9i/image/upload/v1781231191/WhatsApp_Image_2026-06-09_at_2.57.41_PM_2_caa5yw.jpg" alt="باب ثابت 2" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-name"><i class="fas fa-star"></i> الأبواب الزجاجية (القسم الثابت)</h3>
+                            <ul class="product-specs">
+                                <li><i class="fas fa-check-circle"></i> زجاج سيكوريت متين وعالي النقاء</li>
+                                <li><i class="fas fa-check-circle"></i> تصميم هندسي ثابت ومتقن للواجهات</li>
+                                <li><i class="fas fa-check-circle"></i> تثبيت آمن واحترافي</li>
+                            </ul>
+                            <div class="product-meta">
+                                <div class="product-price">
+                                    <span class="price-label">سعر المتر المربع</span>
+                                    <span class="price-value">350 <small>ريال</small></span>
+                                </div>
+                                <a href="https://wa.me/966509321020?text=مرحباً%20مصنع%20TRB،%20استفسار%20عن%20القسم%20الثابت" class="btn-whatsapp" target="_blank" rel="noopener">
+                                    <i class="fab fa-whatsapp"></i> طلب عبر الواتساب
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-gallery-wrapper">
+                            <img src="https://res.cloudinary.com/dlcwlgs9i/image/upload/c_crop,g_north_west,h_978,w_738,y_310/WhatsApp_Image_2026-06-09_at_2.57.41_PM_3_g81dhc.jpg" alt="باب متحرك" class="main-img" loading="lazy" width="800" height="600">
+                            <span class="product-tag"><i class="fas fa-camera"></i> اضغط لمشاهدة التنفيذ الواقعي</span>
+                            <div class="hidden-images">
+                                <img src="https://res.cloudinary.com/dlcwlgs9i/image/upload/c_crop,g_north_west,h_982,w_738,y_310/WhatsApp_Image_2026-06-09_at_2.57.41_PM_3_g81dhc.jpg" alt="باب متحرك 1" loading="lazy">
+                                <img src="https://res.cloudinary.com/dlcwlgs9i/image/upload/v1781231190/WhatsApp_Image_2026-06-09_at_2.57.41_PM_1_mfbqhj.jpg" alt="باب متحرك 2" loading="lazy">
+                                <img src="https://res.cloudinary.com/dlcwlgs9i/image/upload/v1781231190/WhatsApp_Image_2026-06-09_at_2.57.40_PM_u3360u.jpg" alt="باب متحرك 3" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-name"><i class="fas fa-star"></i> الأبواب الزجاجية (الباب المتحرك)</h3>
+                            <ul class="product-specs">
+                                <li><i class="fas fa-check-circle"></i> شامل المكينة والإكسسوارات الأصلية</li>
+                                <li><i class="fas fa-check-circle"></i> ضمان سنتين على الماكينة والتركيب</li>
+                                <li><i class="fas fa-check-circle"></i> حركة انسيابية وسلسة وعازلة للصوت</li>
+                            </ul>
+                            <div class="product-meta">
+                                <div class="product-price">
+                                    <span class="price-label">سعر المتر المربع</span>
+                                    <span class="price-value">1,400 <small>ريال</small></span>
+                                </div>
+                                <a href="https://wa.me/966509321020?text=مرحباً%20مصنع%20TRB،%20استفسار%20عن%20الباب%20المتحرك" class="btn-whatsapp" target="_blank" rel="noopener">
+                                    <i class="fab fa-whatsapp"></i> طلب عبر الواتساب
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wooden Doors Tab -->
+            <div class="tab-panel" id="wooden-doors">
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-gallery-wrapper">
+                            <img src="https://res.cloudinary.com/dlcwlgs9i/image/upload/v1781623132/Gemini_Generated_Image_qvpf8nqvpf8nqvpf_gu9hgb.png" alt="باب WPC" class="main-img" loading="lazy" width="800" height="600">
+                            <span class="product-tag"><i class="fas fa-camera"></i> اضغط لمشاهدة التفاصيل</span>
+                            <div class="hidden-images">
+                                <img src="https://res.cloudinary.com/dlcwlgs9i/image/upload/v1781623132/Gemini_Generated_Image_qvpf8nqvpf8nqvpf_gu9hgb.png" alt="WPC Door 1" loading="lazy">
+                                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80" alt="WPC Door 2" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-name"><i class="fas fa-door-closed"></i> باب WPC (Wood Plastic Composite)</h3>
+                            <ul class="product-specs">
+                                <li><i class="fas fa-check-circle"></i> مقاوم للماء والرطوبة بنسبة 100%</li>
+                                <li><i class="fas fa-check-circle"></i> مضاد للنمل الأبيض والحشرات</li>
+                                <li><i class="fas fa-check-circle"></i> عزل حراري وصوتي متقدم</li>
+                                <li><i class="fas fa-check-circle"></i> صديق للبيئة (معاد تدويره)</li>
+                            </ul>
+                            <div class="product-meta">
+                                <div class="product-price">
+                                    <span class="price-label">السعر</span>
+                                    <span class="price-value">1,000 <small>ريال</small></span>
+                                </div>
+                                <a href="https://wa.me/966509321020?text=مرحباً%20مصنع%20TRB،%20أود%20الاستفسار%20عن%20باب%20WPC" class="btn-whatsapp" target="_blank" rel="noopener">
+                                    <i class="fab fa-whatsapp"></i> اطلب الآن
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-gallery-wrapper">
+                            <img src="https://res.cloudinary.com/dlcwlgs9i/image/upload/v1781623400/Gemini_Generated_Image_n7pbk1n7pbk1n7pb_sarnuj.png" alt="باب BPC" class="main-img" loading="lazy" width="800" height="600">
+                            <span class="product-tag"><i class="fas fa-camera"></i> اضغط لمشاهدة التفاصيل</span>
+                            <div class="hidden-images">
+                                <img src="https://res.cloudinary.com/dlcwlgs9i/image/upload/v1781623400/Gemini_Generated_Image_n7pbk1n7pbk1n7pb_sarnuj.png" alt="BPC Door 1" loading="lazy">
+                                <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80" alt="BPC Door 2" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-name"><i class="fas fa-door-closed"></i> باب BPC (Bamboo Plastic Composite)</h3>
+                            <ul class="product-specs">
+                                <li><i class="fas fa-check-circle"></i> مصنوع من ألياف الخيزران الطبيعية</li>
+                                <li><i class="fas fa-check-circle"></i> مقاوم للرطوبة والعوامل الجوية</li>
+                                <li><i class="fas fa-check-circle"></i> مظهر طبيعي أنيق (تشطيب خشبي)</li>
+                                <li><i class="fas fa-check-circle"></i> خفيف الوزن مع قوة عالية</li>
+                            </ul>
+                            <div class="product-meta">
+                                <div class="product-price">
+                                    <span class="price-label">السعر</span>
+                                    <span class="price-value">950 <small>ريال</small></span>
+                                </div>
+                                <a href="https://wa.me/966509321020?text=مرحباً%20مصنع%20TRB،%20أود%20الاستفسار%20عن%20باب%20BPC" class="btn-whatsapp" target="_blank" rel="noopener">
+                                    <i class="fab fa-whatsapp"></i> اطلب الآن
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- Footer -->
     <footer class="main-footer" id="contact">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-info">
-            <h3>TRB GLASS</h3>
-            <p>
-              نحن نعمل بشغف لنقدم لعملائنا أفضل الحلول الزجاجية المعمارية، نجمع
-              بين الفن والهندسة لنصنع مساحات تعكس فخامتك.
-            </p>
-            <div class="social-links">
-              <a href="#" class="hover-target"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a href="#" class="hover-target"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a href="#" class="hover-target"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a href="#" class="hover-target"
-                ><i class="fab fa-snapchat-ghost"></i
-              ></a>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h3>TRB GLASS</h3>
+                    <p>نحن نعمل بشغف لنقدم لعملائنا أفضل الحلول الزجاجية المعمارية، نجمع بين الفن والهندسة لنصنع مساحات تعكس فخامتك.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Snapchat"><i class="fab fa-snapchat-ghost"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#about">عن المصنع</a></li>
+                        <li><a href="#categories">المنتجات</a></li>
+                        <li><a href="#contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>موقعنا والاتصال</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> المملكة العربية السعودية</p>
+                    <p><i class="fas fa-phone-alt"></i> +966 50 932 1020</p>
+                    <p><i class="fas fa-envelope"></i> info@trbglass.com</p>
+                </div>
             </div>
-          </div>
-          <div class="footer-links">
-            <h4>روابط سريعة</h4>
-            <ul>
-              <li><a href="#home" class="hover-target">الرئيسية</a></li>
-              <li><a href="#about" class="hover-target">عن المصنع</a></li>
-              <li><a href="#categories" class="hover-target">المنتجات</a></li>
-              <li><a href="#contact" class="hover-target">تواصل معنا</a></li>
-            </ul>
-          </div>
-          <div class="footer-contact">
-            <h4>موقعنا والاتصال</h4>
-            <p>
-              <i class="fas fa-map-marker-alt"></i> المملكة العربية السعودية
-            </p>
-            <p><i class="fas fa-phone-alt"></i> +966 50 932 1020</p>
-            <p><i class="fas fa-envelope"></i> info@trbglass.com</p>
-          </div>
+            <div class="footer-bottom">
+                <p>© 2026 مصنع TRB للزجاج. جميع الحقوق محفوظة.</p>
+                <p class="dev-credit">
+                    تصميم وتطوير بلمسة إبداعية بواسطة 
+                    <a href="https://instagram.com/3bdallah.pk" target="_blank" rel="noopener" class="dev-link">
+                        المهندس عبدالله أحمد <i class="fab fa-instagram"></i>
+                    </a>
+                </p>
+            </div>
         </div>
-        <div class="footer-bottom">
-          <p>© 2026 مصنع TRB للزجاج. جميع الحقوق محفوظة.</p>
-          <p class="dev-credit">
-            تصميم وتطوير بلمسة إبداعية بواسطة
-            <a
-              href="https://instagram.com/3bdallah.pk"
-              target="_blank"
-              class="hover-target dev-link"
-            >
-              Abdallah Ahmed <i class="fab fa-instagram"></i>
-            </a>
-          </p>
-        </div>
-      </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="main.js"></script>
-  </body>
+    <!-- Scripts مؤجلة -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="main.js" defer></script>
+</body>
 </html>
