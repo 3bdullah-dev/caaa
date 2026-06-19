@@ -1,18 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // كشف الجوال
+  // 1. تشغيل مكتبة الأنيمشن - مع تعطيل على الجوال للأداء
   const isMobile = window.innerWidth < 768;
   
-  // 1. تشغيل AOS على الكمبيوتر فقط (لتحسين الأداء على الجوال)
-  if (!isMobile) {
-    AOS.init({
-      duration: 800,
-      easing: "ease-out-cubic",
-      once: true,
-      mirror: false,
-      offset: 50,
-      disable: false,
-    });
-  }
+  AOS.init({
+    duration: isMobile ? 0 : 800,
+    easing: "ease-out-cubic",
+    once: true,
+    mirror: false,
+    offset: 50,
+    disable: isMobile, // تعطيل على الجوال لمنع القفز
+  });
 
   // 2. القائمة المتجاوبة
   const menuToggle = document.getElementById("menuToggle");
@@ -40,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 3. التبويبات مع تحسين الأداء
+  // 3. التبويبات مع إصلاح القفز
   const tabButtons = document.querySelectorAll(".tab-btn");
   const tabPanels = document.querySelectorAll(".tab-panel");
   
@@ -49,6 +46,12 @@ document.addEventListener("DOMContentLoaded", () => {
       tabButtons.forEach((btn) => btn.classList.remove("active"));
       tabPanels.forEach((panel) => {
         panel.classList.remove("active");
+        const cards = panel.querySelectorAll(".product-card");
+        cards.forEach((card) => {
+          card.style.opacity = "0";
+          card.style.transform = "scale(0.8) translateY(30px)";
+          card.style.animation = "none";
+        });
       });
       
       button.classList.add("active");
@@ -57,26 +60,31 @@ document.addEventListener("DOMContentLoaded", () => {
       const targetPanel = document.getElementById(targetId);
       
       if (targetPanel) {
-        targetPanel.classList.add("active");
-        
-        // تحديث AOS فقط على الكمبيوتر
-        if (!isMobile && typeof AOS !== 'undefined') {
+        setTimeout(() => {
+          targetPanel.classList.add("active");
+          
+          const cards = targetPanel.querySelectorAll(".product-card");
+          cards.forEach((card, index) => {
+            setTimeout(() => {
+              card.style.opacity = "1";
+              card.style.transform = "scale(1) translateY(0)";
+              card.style.animation = `blurFadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards`;
+            }, index * 150);
+          });
+          
+          // تأخير AOS.refresh لمنع القفز
           setTimeout(() => {
-            AOS.refresh();
-          }, 100);
-        }
+            if (!isMobile) AOS.refresh();
+          }, 700);
+        }, 50);
       }
     });
   });
 
-  // 4. الهيدر - استخدام requestAnimationFrame للأداء
-  let lastScroll = 0;
+  // 4. الهيدر
   const header = document.querySelector(".main-header");
-  
   window.addEventListener("scroll", () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 50) {
+    if (window.scrollY > 50) {
       header.style.padding = "10px 0";
       header.style.background = "rgba(10, 21, 32, 0.95)";
       header.style.boxShadow = "0 10px 30px rgba(0,0,0,0.1)";
@@ -85,11 +93,9 @@ document.addEventListener("DOMContentLoaded", () => {
       header.style.background = "rgba(10, 21, 32, 0.85)";
       header.style.boxShadow = "none";
     }
-    
-    lastScroll = currentScroll;
   }, { passive: true });
 
-  // 5. Lightbox - محسّن
+  // 5. Lightbox
   const lightboxOverlay = document.createElement("div");
   lightboxOverlay.className = "lightbox-overlay";
   lightboxOverlay.innerHTML = `
@@ -157,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateLightboxImage();
   });
 
-  // 6. العدادات - محسّنة باستخدام Intersection Observer
+  // 6. العدادات
   const counters = document.querySelectorAll(".counter-num");
   const sectionAbout = document.getElementById("about");
   let started = false;
@@ -168,7 +174,6 @@ document.addEventListener("DOMContentLoaded", () => {
       let count = 0;
       const duration = 2000;
       const increment = target / (duration / 16);
-      
       const updateCount = () => {
         count += increment;
         if (count < target) {
